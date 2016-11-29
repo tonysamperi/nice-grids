@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tony's Git - ng-tutorial</title>
+    <title>Tony's Git - nice-grids</title>
     <meta name="author" content="Tony Samperi">
-    <meta name="description" content="ngTutorial: una semplice widget per realizzare un tutorial introduttivo">
+    <meta name="description" content="niceGrids: una semplice widget per realizzare un tutorial introduttivo">
     <meta name="keywords"
-          content="ng-tutorial angular angularjs widget responsive tutorial module modulo javascript bootstrap intro tutorial guide guida tony samperi github">
+          content="nice-grids angular angularjs widget responsive tutorial module modulo javascript bootstrap intro tutorial guide guida tony samperi github">
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -28,9 +28,8 @@
     <script src="js/angular.js"></script>
     <script src="js/app.js"></script>
 
-    <!-- ng-tutorial INCLUSIONS -->
-    <link href="ng-tutorial/css/ng-tutorial.css" rel="stylesheet"/>
-    <script src="ng-tutorial/ng-tutorial.js"></script>
+    <!-- nice-grids INCLUSIONS -->
+    <script src="nice-grids/nice-grids.js"></script>
 </head>
 <body id="page-top" class="index">
 <!-- Navigation -->
@@ -77,7 +76,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="intro-text">
-                    <span class="name">ngTutorial</span>
+                    <span class="name">niceGrids</span>
                     <hr class="star-light">
                     <span class="skills">A powerful responsive tutorial module</span>
                 </div>
@@ -95,34 +94,25 @@
         </div>
         <div class="row">
             <div class="col-xs-offset-2 col-xs-8 text-center">
-                ngTutorial is the easiest way to create a simple and responsive <em>tutorial</em> in your page.
+                niceGrids is the easiest way to create a simple and responsive <em>tutorial</em> in your page.
                 <br/>
 
                 <ol style="text-align: left">
-                    <li>Import JS and CSS in your page</li>
-                    <li>Inject ngTutorial in your app:
-                        <pre><code>var app = angular.module("myApp", ["ngTutorial"]);</code></pre>
-                    </li>
-                    <li>Put the "tutorial" attribute on the container and "tutorial-highlight" on elements you want to
-                        render over the dark overlay:
+                    <li>Import JS in your page</li>
+                    <li>Put the "nice-grids" attribute on the container :
                         <pre><code>
-                            &lt;any tutorial="myTutorialActivator" tutorial-steps="2"&gt;
+                            &lt;any nice-grids&gt;
                             &lt;!-- YOUR CONTENT --&gt;
-                            &lt;any tutorial-highlight="1"&gt;
+                            &lt;any&gt;
                             &lt;!-- OTHER CONTENT --&gt;
                             &lt;/any&gt;
-                            &lt;any tutorial-highlight="2"&gt;
+                            &lt;any &gt;
                             &lt;!-- OTHER CONTENT AGAIN --&gt;
                             &lt;/any&gt;
                             &lt;/any&gt;
                         </code></pre>
                     </li>
                 </ol>
-
-                <div class="alert alert-info">
-                    Note: "myTutorialActivator" is intended as $scope.myTutorialActivator in your controller and it
-                    should be a Boolean variable
-                </div>
             </div>
         </div>
     </div>
@@ -138,7 +128,7 @@
 
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <p>(Put this options as attributes on the element with the "tutorial" attribute)</p>
+                <p>(Put this options as attributes on the element with the "nice-grids" attribute)</p>
                 <hr/>
                 <table class="table table-striped table-bordered">
                     <thead>
@@ -150,39 +140,16 @@
                     </tr>
                     </thead>
                     <tbody>
+                    <!--<tr>-->
+                    <!--<td><strong>tutorial-prevent-click</strong></td>-->
+                    <!--<td>If "true", an extra overlay will prevent user to interact with highlighted elements-->
+                    <!--(Since highlighted elements are real elements of your page)-->
+                    <!--</td>-->
+                    <!--<td>String</td>-->
+                    <!--<td>false</td>-->
+                    <!--</tr>-->
                     <tr>
-                        <td><strong>tutorial-prevent-click</strong></td>
-                        <td>If "true", an extra overlay will prevent user to interact with highlighted elements
-                            (Since highlighted elements are real elements of your page)
-                        </td>
-                        <td>String</td>
-                        <td>false</td>
-                    </tr>
-                    <tr>
-                        <td><strong>tutorial-show-close</strong></td>
-                        <td>If "true" a close button will be rendered to terminate the tutorial.<br>
-                            If empty any click will close the tutorial.
-                        </td>
-                        <td>String</td>
-                        <td>false</td>
-                    </tr>
-                    <tr>
-                        <td><strong>tutorial-steps</strong></td>
-                        <td>If you want steps in your tutorial put this attribute on the tutorial container,
-                            and fill it with the total step you want to show.
-                        </td>
-                        <td>String</td>
-                        <td>null</td>
-                    </tr>
-                    <tr>
-                        <td><strong>tutorial-highlight</strong></td>
-                        <td>If you used the "tutorial-steps" feature, you must valorize this attribute
-                            (on the elements you want to highlight) with the step you want elements
-                            to be highlighted.
-                            Take a look to the "usage" section to better understand this.
-                        </td>
-                        <td>String</td>
-                        <td>null</td>
+                        <td colspan="4">NO PARAMS YET!</td>
                     </tr>
                     </tbody>
                 </table>
@@ -203,33 +170,39 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 text-center">
-                    <p>Click the "START" button to see "ngTutorial" in action!</p>
-                    <p><a class="btn btn-large btn-success" ng-click="beginTutorial()">START</a></p>
+                    <p>Resize the window to see "niceGrids" in action!</p>
                 </div>
             </div>
-            <div class="row" tutorial="activateTutorial" tutorial-steps="2">
+            <div class="row">
                 <div class="col-xs-12 text-center">
                     <p>This is the <strong>Tutorial</strong> container</p>
                     <p>Is angular loaded? {{angularLoaded || 'No, dude!'}}</p>
 
-                    <div class="row">
+                    <div class="row" nice-grids>
                         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 bg-warning">
-                            <div tutorial-highlight="1">
-                                <p>Yes, you can use bootstrap and columns</p>
-                                <p>ngTutorial will always respect your layout</p>
-                                <p>This "highlight" is inside a column</p>
+                            <div>
+                                <p>Yes, this is designed for bootstrap, but not only!</p>
+                                <p>niceGrids will always respect your layout</p>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" tutorial-highlight="2">
-                            <p>Yes it's not a problem if the layer background is transparent</p>
-                            <p>ngTutorial will check and fix view issues!</p>
-                            <p>This "highlight" is on a column</p>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="background-color: #AAFFEE;;">
+                            <p>With niceGrids you'll always get nice grids, when content would cause a disalignment!</p>
+                            <p>Press the button above, to see niceGrids in action!</p>
+                            <p>Obviously in the version you can download, it will start automatically onload!</p>
+                            <p>Resize is buffered! So calculation won't slow down your pages!</p>
+                            <p>Resize will reset height and won't do any calculation if the width of the window is less than 769px!</p>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    </div>
+                    <div class="row" nice-grids>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="background-color: #FFAAAA;">
                             <p>What else?</p>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 bg-primary" tutorial-highlight="1">
-                            <p>And also is not a problem if it's not!</p>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 bg-primary">
+                            <p>This grid has much more text than the one on the left!</p>
+                            <p>This grid has much more text than the one on the left!</p>
+                            <p>This grid has much more text than the one on the left!</p>
+                            <p>This grid has much more text than the one on the left!</p>
+                            <p>This grid has much more text than the one on the left!</p>
                         </div>
                     </div>
                 </div>
@@ -248,11 +221,11 @@
         </div>
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                <p>ngTutorial is a widget to easily add a tutorial page in your website!</p>
+                <p>niceGrids is a plugin to easily had good-looking grids in your website!</p>
             </div>
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                <a href="https://github.com/tonysamperi/ng-tutorial" class="btn btn-lg btn-outline">
-                    <i class="fa fa-download"></i> Download ngTutorial
+                <a href="https://github.com/tonysamperi/nice-grids" class="btn btn-lg btn-outline">
+                    <i class="fa fa-download"></i> Download niceGrids
                 </a>
             </div>
         </div>
@@ -295,7 +268,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    ngTutorial created by Tony Samperi (2016)
+                    niceGrids created by Tony Samperi (2016)
                 </div>
             </div>
         </div>

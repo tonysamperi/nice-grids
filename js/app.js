@@ -1,8 +1,9 @@
-var app = angular.module("myApp", ["ngTutorial"])
+var app = angular.module("myApp", [])
     .controller('introController', function ($scope) {
         $scope.angularLoaded = "Yeah, man!";
 
-        $scope.beginTutorial = function () {
-            $scope.activateTutorial = true;
-        }
+        $scope.niceGrids = function(){
+
+            $.fn.niceGrids();
+        };
     });
