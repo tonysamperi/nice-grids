@@ -1,5 +1,5 @@
 
-$.fn.niceGrids = function(){
+jQuery.fn.niceGrids = function(){
     var selector = "[nice-grids]";
     if(!selector || typeof selector !== typeof ""){
         return
@@ -10,10 +10,9 @@ $.fn.niceGrids = function(){
         _Max = 0;
         var $container = $(container);
         $container.children().css("height", "auto");
-        if($(window).width() < 769) return;
+        if(jQuery(window).width() < 769) return;
         $container.children().each(function(index,box){
             var $item = $(box);
-            //$item.css("auto");
             $itemHeight = $item.outerHeight();
             _Max = $itemHeight > _Max ? $itemHeight : _Max;
         });
@@ -24,7 +23,7 @@ $.fn.niceGrids = function(){
     });
 
 };
-$(document).ready(function(){
+jQuery(document).ready(function($){
     $.fn.niceGrids();
     $(window).on("resize", function(){
         clearTimeout(resizeTimeout);
