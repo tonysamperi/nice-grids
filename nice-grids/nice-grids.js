@@ -24,8 +24,8 @@ jQuery.fn.niceGrids = function(selector){
 
 };
 jQuery(document).ready(function($){
-    $.fn.niceGrids();
 	var selector = "[nice-grids]", w = $(window), lastWidth, autoWidth;
+    $.fn.niceGrids(selector);
     w.on("resize", function(){
         clearTimeout(resizeTimeout);
         var resizeTimeout = setTimeout(function(){
